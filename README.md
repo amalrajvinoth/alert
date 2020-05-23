@@ -1,6 +1,7 @@
 # Getting Started
 
-clone `https://github.com/amalrajvinoth/alert`
+git clone `https://github.com/amalrajvinoth/alert`
+
 cd alert
 
 mvn clean spring-boot:run
