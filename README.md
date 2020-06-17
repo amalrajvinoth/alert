@@ -1,10 +1,10 @@
 # Getting Started
-
+```
 clone `https://github.com/amalrajvinoth/alert`
 cd alert
 
 mvn clean spring-boot:run
-
+```
 
 # Table Structure
 
@@ -34,10 +34,12 @@ schedule
 
 # Info
 
-*H2 console url*: http://localhost:8080/h2-console
+```
+H2 console url: http://localhost:8080/h2-console
+DB Url(unix): jdbc:h2:file:${user.home}/alert
 user: sa
 pwd: sa
-
+```
 
 # Rest APIs
 
@@ -45,7 +47,7 @@ pwd: sa
 
 ```
 curl --request POST \
-  --url http://localhost:8080/v1/alerts/f8b331c4-185f-4b23-a0cb-28353b62ee2d \
+  --url http://localhost:8080/v1/alerts \
   --header 'content-type: application/json' \
   --cookie JSESSIONID=3AD3CE8A8EC6AA592EFBDC317356462F \
   --data '{
@@ -91,7 +93,7 @@ curl --request PUT \
 }'
 ```
 
-* Update Alert
+* Get Alert
 
 ```
 curl --request GET \
@@ -99,7 +101,6 @@ curl --request GET \
   --header 'content-type: application/json' \
   --cookie JSESSIONID=3AD3CE8A8EC6AA592EFBDC317356462F
 ```
-
 
 * Delete Alert
 
